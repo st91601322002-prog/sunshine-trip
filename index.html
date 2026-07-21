@@ -610,7 +610,8 @@
       ]},
     {time:"13:00－14:20", title:"海濱海產", desc:"離開棧貳庫後，直接開車前往旗津的海濱海產，享用新鮮海鮮午餐。",
       blocks:[{h:"注意事項", type:"list", items:["晚上還要吃牛肉湯，午餐適量即可。"]}]},
-    {time:"14:20－14:40", title:"前往電動車租借處", desc:"用餐結束後，開車從海濱海產前往旗津老街的電動車租借處。", blocks:[]},
+    {time:"14:20－14:40", title:"前往電動車租借處", desc:"用餐結束後，開車從海濱海產前往旗津老街的電動車租借處。",
+      blocks:[{h:"推薦", type:"list", items:["網友推薦樂騎腳踏車"]}]},
     {time:"14:40－15:00", title:"租四輪電動車", desc:"在旗津老街／輪渡站附近租有遮陽棚的四輪電動車。",
       blocks:[{h:"租車確認事項", type:"list", items:["座位數是否足夠","遮陽棚是否完整","煞車及安全設備","還車時間","可騎乘範圍"]}]},
     {time:"15:00－15:50", title:"旗津電動車兜風", desc:"坐電動車欣賞旗津海岸風景，沿途選一處下車拍照。",
@@ -641,6 +642,7 @@
     {group:"DAY 2・8/15", items:[
       {name:"棧貳庫 KW2", note:"高雄市鼓山區蓬萊路17號"},
       {name:"海濱海產", note:"旗津海鮮餐廳・海鮮午餐地點"},
+      {name:"樂騎腳踏車", note:"電動車／腳踏車租借店", url:"https://maps.app.goo.gl/RQQ5yoMQafJ82sW36"},
       {name:"旗津老街", note:"電動車租借處附近"},
       {name:"南科迎曦湖", note:"台南市・黃色絲帶公共藝術「舞彩迎賓」"},
       {name:"善化和味牛肉湯", note:"台南市善化區・晚餐地點"}
@@ -733,7 +735,7 @@
       grp.items.forEach(function(loc){
         html += '<div class="map-card"><div class="pin"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.1 7-12a7 7 0 0 0-14 0c0 5.9 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg></div>'+
           '<div class="info"><div class="name">'+loc.name+'</div><div class="note">'+loc.note+'</div></div>'+
-          '<a class="go" href="'+gmapUrl(loc.name)+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>';
+          '<a class="go" href="'+(loc.url || gmapUrl(loc.name))+'" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M9 7h8v8"/></svg></a></div>';
       });
     });
     document.getElementById('map-list').innerHTML = html;
